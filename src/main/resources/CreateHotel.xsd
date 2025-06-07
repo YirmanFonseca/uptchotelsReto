@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           xmlns:tns="http://www.uptc.edu.co/hotel/service/gen"
+           targetNamespace="http://www.uptc.edu.co/hotel/service/gen"
+           elementFormDefault="qualified">
+
+    <!-- Petición para crear un hotel -->
+    <xs:element name="createHotelRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="name" type="xs:string"/>
+                <xs:element name="city" type="xs:string"/>
+                <xs:element name="address" type="xs:string"/>
+                <xs:element name="phone" type="xs:string"/>
+                <xs:element name="email" type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <!-- Respuesta al crear un hotel -->
+    <xs:element name="createHotelResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="status" type="xs:string"/>
+                <xs:element name="message" type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+</xs:schema>
